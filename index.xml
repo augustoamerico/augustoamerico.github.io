@@ -3,7 +3,7 @@
   <channel>
       <title>My Blog on My Blog </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>https://augustoamrico.github.io/</link>
+    <link>https://augustoamerico.github.io/</link>
     <language>en-us</language>
     <author>Tiago dos Santos</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Hello My Type Markdown</title>
-      <link>https://augustoamrico.github.io/post/2015-07-24-r-rmarkdown/</link>
+      <link>https://augustoamerico.github.io/post/2015-07-24-r-rmarkdown/</link>
       <pubDate>Sun, 24 Jul 2016 21:13:14 -0500</pubDate>
       <author>Tiago dos Santos</author>
-      <guid>https://augustoamrico.github.io/post/2015-07-24-r-rmarkdown/</guid>
+      <guid>https://augustoamerico.github.io/post/2015-07-24-r-rmarkdown/</guid>
       <description>&lt;div id=&#34;r-my-type-markdown&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;R MY TYPE Markdown&lt;/h1&gt;
 &lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
@@ -48,7 +48,7 @@ pie(
   init.angle = -50, border = NA
 )&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;https://augustoamrico.github.io/post/2015-07-24-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://augustoamerico.github.io/post/2015-07-24-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: A fancy pie chart.
 &lt;/p&gt;
@@ -59,10 +59,10 @@ Figure 1: A fancy pie chart.
     
     <item>
       <title>Hello My Type Markdown</title>
-      <link>https://augustoamrico.github.io/post/2015-07-25-r-rmarkdown/</link>
+      <link>https://augustoamerico.github.io/post/2015-07-25-r-rmarkdown/</link>
       <pubDate>Fri, 24 Jul 2015 21:13:14 -0500</pubDate>
       <author>Tiago dos Santos</author>
-      <guid>https://augustoamrico.github.io/post/2015-07-25-r-rmarkdown/</guid>
+      <guid>https://augustoamerico.github.io/post/2015-07-25-r-rmarkdown/</guid>
       <description>&lt;div id=&#34;r-my-type-markdown&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;R MY TYPE Markdown&lt;/h1&gt;
 &lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
@@ -96,7 +96,7 @@ pie(
   init.angle = -50, border = NA
 )&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;https://augustoamrico.github.io/post/2015-07-25-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://augustoamerico.github.io/post/2015-07-25-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: A fancy pie chart.
 &lt;/p&gt;
@@ -107,10 +107,10 @@ Figure 1: A fancy pie chart.
     
     <item>
       <title>Hello My Type Markdown</title>
-      <link>https://augustoamrico.github.io/post/2015-07-26-r-rmarkdown/</link>
+      <link>https://augustoamerico.github.io/post/2015-07-26-r-rmarkdown/</link>
       <pubDate>Fri, 24 Jul 2015 21:13:14 -0500</pubDate>
       <author>Tiago dos Santos</author>
-      <guid>https://augustoamrico.github.io/post/2015-07-26-r-rmarkdown/</guid>
+      <guid>https://augustoamerico.github.io/post/2015-07-26-r-rmarkdown/</guid>
       <description>&lt;div id=&#34;r-my-type-markdown&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;R MY TYPE Markdown&lt;/h1&gt;
 &lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
@@ -144,7 +144,7 @@ pie(
   init.angle = -50, border = NA
 )&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;https://augustoamrico.github.io/post/2015-07-26-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://augustoamerico.github.io/post/2015-07-26-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: A fancy pie chart.
 &lt;/p&gt;
@@ -155,10 +155,10 @@ Figure 1: A fancy pie chart.
     
     <item>
       <title>Hello R Markdown</title>
-      <link>https://augustoamrico.github.io/post/2015-07-23-r-rmarkdown/</link>
+      <link>https://augustoamerico.github.io/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       <author>Tiago dos Santos</author>
-      <guid>https://augustoamrico.github.io/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>https://augustoamerico.github.io/post/2015-07-23-r-rmarkdown/</guid>
       <description>&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;R Markdown&lt;/h1&gt;
 &lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
@@ -192,7 +192,7 @@ pie(
   init.angle = -50, border = NA
 )&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;https://augustoamrico.github.io/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://augustoamerico.github.io/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: A fancy pie chart.
 &lt;/p&gt;
@@ -203,10 +203,10 @@ Figure 1: A fancy pie chart.
     
     <item>
       <title>Portfolio 1</title>
-      <link>https://augustoamrico.github.io/portfolio/2015-07-23-r-rmarkdown/</link>
+      <link>https://augustoamerico.github.io/portfolio/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       <author>Tiago dos Santos</author>
-      <guid>https://augustoamrico.github.io/portfolio/2015-07-23-r-rmarkdown/</guid>
+      <guid>https://augustoamerico.github.io/portfolio/2015-07-23-r-rmarkdown/</guid>
       <description>&lt;div id=&#34;this-is-the-first-item-in-my-portfolio&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;This is the first item in my portfolio&lt;/h1&gt;
 &lt;p&gt;Yup, This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
@@ -240,7 +240,7 @@ pie(
   init.angle = -50, border = NA
 )&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;https://augustoamrico.github.io/portfolio/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://augustoamerico.github.io/portfolio/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: A fancy pie chart.
 &lt;/p&gt;
