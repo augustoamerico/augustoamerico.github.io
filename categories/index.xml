@@ -3,7 +3,7 @@
   <channel>
       <title>Categories on My Blog </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>https://augustoamerico.github.io/categories/</link>
+    <link>/categories/</link>
     <language>en-us</language>
     <author>Tiago dos Santos</author>
     
