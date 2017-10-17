@@ -3,7 +3,7 @@
   <channel>
       <title>Portfolios on My Blog </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>/portfolio/</link>
+    <link>https://augustoamrico.github.io//portfolio/</link>
     <language>en-us</language>
     <author>Tiago dos Santos</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Portfolio 1</title>
-      <link>/portfolio/2015-07-23-r-rmarkdown/</link>
+      <link>https://augustoamrico.github.io//portfolio/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       <author>Tiago dos Santos</author>
-      <guid>/portfolio/2015-07-23-r-rmarkdown/</guid>
+      <guid>https://augustoamrico.github.io//portfolio/2015-07-23-r-rmarkdown/</guid>
       <description>&lt;div id=&#34;this-is-the-first-item-in-my-portfolio&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;This is the first item in my portfolio&lt;/h1&gt;
 &lt;p&gt;Yup, This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
