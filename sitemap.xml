@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/portfolio/2018-11-18-statscourse/</loc>
+    <lastmod>2018-11-18T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018-01-10-decision-trees-intro/</loc>
     <lastmod>2018-01-10T10:00:00-05:00</lastmod>
   </url>
@@ -15,11 +20,6 @@
   <url>
     <loc>/about/</loc>
     <lastmod>2017-10-17T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/portfolio/2018-11-18-statscourse/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
@@ -58,7 +58,7 @@
   
   <url>
     <loc>/portfolio/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <lastmod>2018-11-18T21:13:14-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -76,13 +76,13 @@
   
   <url>
     <loc>/categories/stats/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <lastmod>2018-11-18T21:13:14-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-01-10T10:00:00-05:00</lastmod>
+    <lastmod>2018-11-18T21:13:14-05:00</lastmod>
     <priority>0</priority>
   </url>
   
