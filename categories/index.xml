@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Tiago dos Santos</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on Tiago dos Santos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>santos.tmd@gmail.com (Tiago dos Santos)</managingEditor>
+    <webMaster>santos.tmd@gmail.com (Tiago dos Santos)</webMaster>
+    
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Challenge</title>
+      <link>/categories/challenge/</link>
+      <pubDate>Sun, 03 Dec 2017 10:00:00 -0500</pubDate>
+      <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
+      <guid>/categories/challenge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Feedzai</title>
+      <link>/categories/feedzai/</link>
+      <pubDate>Sun, 03 Dec 2017 10:00:00 -0500</pubDate>
+      <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
+      <guid>/categories/feedzai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Life</title>
+      <link>/categories/life/</link>
+      <pubDate>Sun, 03 Dec 2017 10:00:00 -0500</pubDate>
+      <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
+      <guid>/categories/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ml</title>
+      <link>/categories/ml/</link>
+      <pubDate>Wed, 10 Jan 2018 10:00:00 -0500</pubDate>
+      <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
+      <guid>/categories/ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/categories/r/</link>
+      <pubDate>Sun, 24 Jul 2016 21:13:14 -0500</pubDate>
+      <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
+      <guid>/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stats</title>
+      <link>/categories/stats/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
+      <guid>/categories/stats/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

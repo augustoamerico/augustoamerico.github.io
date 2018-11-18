@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Tiago dos Santos</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Tiago dos Santos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>santos.tmd@gmail.com (Tiago dos Santos)</managingEditor>
+    <webMaster>santos.tmd@gmail.com (Tiago dos Santos)</webMaster>
+    <lastBuildDate>Wed, 10 Jan 2018 10:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Decision Trees</title>
+      <link>/post/2018-01-10-decision-trees-intro/</link>
+      <pubDate>Wed, 10 Jan 2018 10:00:00 -0500</pubDate>
+      <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
+      <guid>/post/2018-01-10-decision-trees-intro/</guid>
+      <description>Understanding Decision Trees A Decision tree is a modal that can …
+Splitting the dataset: Entropy The essence of a decision tree is the process of splitting the data into subsets to arrange the leafs as pure nodes - or almost pure nodes. In a real world scenario, we must assume that it is not possible to have all leafs as pure node because there are problems that are that difficult to solve.</description>
+    </item>
+    
+    <item>
+      <title>Embracing a new challenge: Feedzai!</title>
+      <link>/post/2017-12-03-feedzai/</link>
+      <pubDate>Sun, 03 Dec 2017 10:00:00 -0500</pubDate>
+      <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
+      <guid>/post/2017-12-03-feedzai/</guid>
+      <description>Since 2016 I’ve been focusing on data science and distributed computing, a path that I’ve decided to take back in late 2014 when I got back do University to take a Masters in Computer Science. At the time, I was looking to learn a bit about machine learning and tons about distributed system and web development - but while I was learning more about Operational Research and Machine Learning, my direction changed a little bit and I begin to study Data Visualization and Data Warehouse.</description>
+    </item>
+    
+    <item>
+      <title>Hello My Type Markdown</title>
+      <link>/post/2015-07-24-r-rmarkdown/</link>
+      <pubDate>Sun, 24 Jul 2016 21:13:14 -0500</pubDate>
+      <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
+      <guid>/post/2015-07-24-r-rmarkdown/</guid>
+      <description>R MY TYPE Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.</description>
+    </item>
+    
+    <item>
+      <title>Hello My Type Markdown</title>
+      <link>/post/2015-07-25-r-rmarkdown/</link>
+      <pubDate>Fri, 24 Jul 2015 21:13:14 -0500</pubDate>
+      <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
+      <guid>/post/2015-07-25-r-rmarkdown/</guid>
+      <description>R MY TYPE Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.</description>
+    </item>
+    
+    <item>
+      <title>Hello My Type Markdown</title>
+      <link>/post/2015-07-26-r-rmarkdown/</link>
+      <pubDate>Fri, 24 Jul 2015 21:13:14 -0500</pubDate>
+      <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
+      <guid>/post/2015-07-26-r-rmarkdown/</guid>
+      <description>R MY TYPE Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.</description>
+    </item>
+    
+  </channel>
+</rss>
