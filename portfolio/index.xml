@@ -19,20 +19,7 @@
       <pubDate>Sun, 18 Nov 2018 21:13:14 -0500</pubDate>
       <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
       <guid>/portfolio/2018-11-18-statscourse/</guid>
-      <description>bla bla bla
-Multivariate Stats
-Computational Stats</description>
-    </item>
-    
-    <item>
-      <title>Portfolio 1</title>
-      <link>/portfolio/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
-      <guid>/portfolio/2015-07-23-r-rmarkdown/</guid>
-      <description>This is The first item in my portfolio Yup, This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.</description>
+      <description>During this summer, I’ve taken the decision of getting better at Statistics. My relationship with statistics was a kind of relation that you can stare to each other and maybe get an intuition of what’s going on, but no more than that. Anything that involved, for example, understanding how is a pearson’ correlation matrix calculated and what’s the meaning of the math behind that gave me the chills since I really had bad foundations.</description>
     </item>
     
   </channel>
