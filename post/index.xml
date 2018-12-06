@@ -8,10 +8,19 @@
     <language>en-us</language>
     <managingEditor>santos.tmd@gmail.com (Tiago dos Santos)</managingEditor>
     <webMaster>santos.tmd@gmail.com (Tiago dos Santos)</webMaster>
-    <lastBuildDate>Sun, 03 Dec 2017 10:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 18 Nov 2018 21:13:14 -0500</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Getting (more) confortable with statistics</title>
+      <link>/post/2018-11-18-statscourse/</link>
+      <pubDate>Sun, 18 Nov 2018 21:13:14 -0500</pubDate>
+      <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
+      <guid>/post/2018-11-18-statscourse/</guid>
+      <description>During this summer, I’ve taken the decision of getting better at Statistics. My relationship with statistics was a kind of relation that I coukd stare at it and maybe get an intuition of what’s going on, but no more than that. Anything that involved, for example, understanding how is a Pearson’ correlation matrix calculated and what’s the meaning of the math behind that gave me the chills since I really had bad foundations.</description>
+    </item>
     
     <item>
       <title>Embracing a new challenge: Feedzai!</title>
