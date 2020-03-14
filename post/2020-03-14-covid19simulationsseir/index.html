@@ -1,0 +1,389 @@
+
+
+<!DOCTYPE HTML>
+
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>Simulations of Infected Individuals by COVID-19 in Portugal using the SEIR Model - Tiago dos Santos</title>
+	<meta name="author" content="map[email:santos.tmd@gmail.com name:Tiago dos Santos]">
+
+	
+	  
+	<meta name="description" content="/images/COVID-19-site-1080450.png">
+	
+
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<link href='/index.xml' rel="alternate" title="Tiago dos Santos" type="application/atom+xml">
+	
+	<link rel="canonical" href="/post/2020-03-14-covid19simulationsseir/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	
+	<link href='https://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner">
+ <div class="profilepic">
+	
+	
+	<script src="/js/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='https://www.gravatar.com/avatar/" + MD5('santos.tmd@gmail.com') + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+	
+	
+</div>
+
+<nav id="main-nav"><ul class="main">
+    <li><a href="/">Blog</a></li>
+    <li><a href="/portfolio/">Portfolio</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/post/">Archives</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+			<a class="email" href='mailto:santos.tmd@gmail.com' title="Email">Email</a>
+		
+		
+		
+		
+		
+		
+		
+		
+			<a class="linkedin" href='http://www.linkedin.com/in/tiago-dos-santos-1397a631' title="LinkedIn">LinkedIn</a>
+		
+		
+		
+		
+		
+		
+		
+    	
+    	
+			<a class="rss" href='/index.xml' title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>
+			</div>
+		</div>
+		<div class="mid-col">
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+					<div itemscope itemtype="http://schema.org/Blog">
+					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div><img src="/images/COVID-19-site-1080450.png" alt="Profile Picture" style="max-width: 100%;"></div>
+    
+
+
+    <h1 class="title" itemprop="name">Simulations of Infected Individuals by COVID-19 in Portugal using the SEIR Model</h1>
+	<div class="entry-content" itemprop="articleBody">
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/plotly-binding/plotly.js"></script>
+<script src="/rmarkdown-libs/typedarray/typedarray.min.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+<link href="/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/plotly-main/plotly-latest.min.js"></script>
+
+
+<div id="simulating-some-covid-19-scenarios-in-portugal-with-the-seir-model" class="section level1">
+<h1>Simulating some COVID-19 scenarios in Portugal with the SEIR Model</h1>
+<p>While on reddit, I came across <a href="https://www.nature.com/articles/s41421-020-0148-0">this paper called “Phase-adjusted estimation of the number of Coronavirus Disease 2019 cases in Wuhan, China”</a>, where the authors applied a model to rum some simulations and reason about if the public health interventions indeed suffice or not.</p>
+<p>In the paper, the model used is the SEIR Model - that I had never heard about until today (well, I started this by 9PM on 2020-03-13, and now it is 2AM 2020-03-14)… Until I gave it a try, some googling and youtubing until I understand it.</p>
+<p>In this post, I will apply this model with the same parameters as described in the paper to the Portuguese numbers, and check what are the results.</p>
+<div id="seir-model" class="section level2">
+<h2>SEIR Model</h2>
+<p>In the context Epidemics dynamics, there is a modeling approach called SEIR.</p>
+<p>This techniques describes a process that has 4 stages:</p>
+<div class="figure">
+<img src="http://idmod.org/docs/malaria/_images/SEIR-SEIRS.png" alt="SEIRS Model" />
+<p class="caption">SEIRS Model</p>
+</div>
+<ul>
+<li>Susceptible Individuals - These are the individuals who have not been infected, but can be exposed to the infection</li>
+<li>Exposed Individuals - These are the individuals who have acquired the infection, but are still not transmitting the disease</li>
+<li>Infectious Individual - These are the individuals who have the pathogen and are active transmitting the disease</li>
+<li>Resolved Individual - These are the individuals that have either recovered or have died</li>
+</ul>
+<p>In this stages, the following interactions can happen:</p>
+<ul>
+<li><a href="#becoming-exposed">Becoming Exposed</a> : A Susceptible Individual can become an Exposed Individual</li>
+<li><a href="#becoming-infected">Becoming Infected</a> : An Exposed Individual can become an Infectious Individual</li>
+<li>Becoming Resolved: An Infectious Individual will be a Resolved Individual</li>
+</ul>
+<p>Let’s assume that Recovered Individuals become immune to the pathogen, and therefore they cannot be a Susceptible Individual again.
+Indeed, the latter don’t even matter because we are going to focus on the number of infected - and for this, the only interactions that matter are <a href="#becoming-exposed">Becoming Exposed</a> and <a href="#becoming-infected">Becoming Infected</a>.</p>
+<div id="becoming-exposed" class="section level3">
+<h3>Becoming Exposed</h3>
+<p>Every day, individuals from a population can become exposed. The only individuals that can become exposed are the susceptible individuals, and there are factors that influence this exposition:</p>
+<ul>
+<li>For a susceptible individual to become exposed, the individual has to have contact with an infectious individual</li>
+<li>Even when in contact with an infectious individual, there is a given <strong>transmission probability</strong> of the pathogen</li>
+<li>As the more contacts a susceptible individual has during the day, the greater is the probability for contacting with an infectious individual</li>
+<li>As the more contacts an infectious individual has during the day, the greater is the probability for contacting with a susceptible individual</li>
+<li>Has more susceptible individuals became exposed, there are less individuals to become exposed out of the entire population</li>
+</ul>
+</div>
+<div id="becoming-infected" class="section level3">
+<h3>Becoming Infected</h3>
+<p>Every day, there will be exposed individuals that become infectious individuals. This amount of new infectious individuals is a process controlled by the parameter <code>infectious_rate</code>, which indicates the rate at which exposed individuals became infectious individuals.</p>
+</div>
+</div>
+<div id="implementing-a-seir-model" class="section level2">
+<h2>Implementing a SEIR Model</h2>
+<p>Here you can see what I was able to implement from the paper’s differential equations.
+If you are reading this and the paper, and you have found something that doesn’t seems quite right, please get in touch with me!</p>
+<div id="modelling-transmission-rate" class="section level3">
+<h3>Modelling Transmission Rate</h3>
+<p>In this paper, the <code>transmission_rate</code> is modeled with two factors (as also shown in this paper, in the section <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3935673/">R0 IN SIMPLE MODELS</a>:</p>
+<ul>
+<li><span class="math inline">\(R_0\)</span>: this value represent the amount of individuals a given infectious person can infect (an average) by the begin of the epidemic (that0s why it is subscript with 0, representing time = 0)</li>
+<li>Recovery Rate: To take into consideration the rate of infectious individuals that become recovery individuals</li>
+</ul>
+<p>Therefore, we have:</p>
+<p><span class="math display">\[
+Transmission Rate = R_0 \times Recovery Rate
+\]</span></p>
+</div>
+<div id="simulating-the-change-over-time-of-susceptible-exposed-infectious-and-removed-cases" class="section level3">
+<h3>Simulating the change over time of Susceptible, Exposed, Infectious and Removed Cases</h3>
+<p>This simulation occurs for a given <code>amount_of_days</code>, where the <span class="math inline">\(R_0\)</span> can vary over time (<code>days_with_new_r0</code>) - for example, the Portuguese Government decreed for schools to be closed, as well as disco bars, while taking other measures in restaurant and malls, which results in a lower <span class="math inline">\(R_0\)</span> from that point on.</p>
+<pre class="r"><code>seir_model_huwen &lt;- function(
+  amount_of_days=30, 
+  days_with_new_r0=list(),
+  initial_susceptible_individuals = 10374822, #https://en.wikipedia.org/wiki/Portuguese_people
+  initial_infectious_individuals = 13,
+  initial_exposed_individuals_factor = 20,
+  initial_removed_individuals = 0,
+  recovery_rate = 1/18,
+  initial_r0 = 2.6,
+  infection_rate = 1/5.2){
+  
+  susceptible_individuals = rep(0, amount_of_days)
+  exposed_individuals = rep(0, amount_of_days)
+  infectious_individuals = rep(0, amount_of_days)
+  removed_individuals = rep(0, amount_of_days)
+  
+  
+  susceptible_individuals[1] = initial_susceptible_individuals 
+  infectious_individuals[1] = initial_infectious_individuals
+  exposed_individuals[1] = infectious_individuals[1]*initial_exposed_individuals_factor
+  removed_individuals[1] = initial_removed_individuals
+  
+  current_transmission_rate = initial_r0 * recovery_rate
+  
+  for(step in 1:amount_of_days){
+    if(step %in% names(days_with_new_r0)){
+      current_transmission_rate = days_with_new_r0[[as.character(step)]]*recovery_rate
+    }
+    all_population = susceptible_individuals[step] + exposed_individuals[step] + infectious_individuals[step] + removed_individuals[step]
+    
+    new_exposed_individuals = current_transmission_rate*(susceptible_individuals[step]/all_population)*infectious_individuals[step]
+
+    new_infectious_individuals = infection_rate*exposed_individuals[step]
+    new_removed_individuals = recovery_rate*infectious_individuals[step]
+    
+    susceptible_individuals[step + 1] = susceptible_individuals[step] - new_exposed_individuals
+    exposed_individuals[step + 1] = exposed_individuals[step] + new_exposed_individuals - new_infectious_individuals
+    infectious_individuals[step + 1] = infectious_individuals[step] + new_infectious_individuals - new_removed_individuals
+    removed_individuals[step + 1] = removed_individuals[step] + new_removed_individuals
+  }
+  return(list(
+    susceptible_individuals = susceptible_individuals,
+    exposed_individuals = exposed_individuals,
+    infectious_individuals = infectious_individuals,
+    removed_individuals = removed_individuals
+  ))
+}</code></pre>
+</div>
+</div>
+<div id="simulating-for-3-isolation-measures" class="section level2">
+<h2>Simulating for 3 isolation measures</h2>
+<p>Now let’s run the simulation for 3 different isolation measures scenarios:</p>
+<ul>
+<li>No isolation measures (this occurred for the first weeks in Portugal, but around 13 March measures started to be taken)</li>
+<li>Moderate isolation measures: Let’s assume that at the beginning no isolation measures were taken. Then by day 20 of the epidemic, after the implementation of isolation measures, the <span class="math inline">\(R_0\)</span> was able to drop to 2. The same thing happened after yet another set of isolation measures, dropping the <span class="math inline">\(R_0\)</span> to 1.5. In day 50 it was able to reach an <span class="math inline">\(R_0\)</span> of 1, and at day 65 the achieved <span class="math inline">\(R_0\)</span> was 0.7.</li>
+<li>Aggressive isolation measures: Let’s assume that at the beginning no isolation measures were taken. Then by day 15, isolation measures were implemented that allowed the <span class="math inline">\(R_0\)</span> to drop to 1.5. Then at day 30, more measures allowed the <span class="math inline">\(R_0\)</span> to drop to 1. The last isolation measures implementation is this case would occur in day 45, dropping the <span class="math inline">\(R_0\)</span> to 0.7.</li>
+</ul>
+<p>Let’s run the simulation for a total of 4 months, and compare the number of infections over time - while taking into consideration that Portugal has around 500 intensive care beds (and some of those are currently being c by patients with other conditions than COVID-19)</p>
+<pre class="r"><code>portuguese_simulation_covid19_data_generation &lt;- function(amount_of_days = 30, days_with_new_r0 = list()){
+  
+
+  simulation_huwen_seir_data = seir_model_huwen(
+    amount_of_days = amount_of_days,
+    days_with_new_r0 = days_with_new_r0
+  )
+  
+  simulation_huwen_seir_df &lt;- data.frame(
+    days = 1:length(simulation_huwen_seir_data$susceptible_individuals) + as.Date(&quot;2020-03-05&quot;),
+    susceptible_individuals = simulation_huwen_seir_data$susceptible_individuals,
+    exposed_individuals = simulation_huwen_seir_data$exposed_individuals,
+    infectious_individuals = simulation_huwen_seir_data$infectious_individuals,
+    removed_individuals = simulation_huwen_seir_data$removed_individuals
+  )
+    
+  return(simulation_huwen_seir_df)
+  
+}</code></pre>
+<pre class="r"><code>moderate_decrese_transmission_rate = list(
+  &quot;20&quot; = 2,
+  &quot;35&quot; = 1.5,
+  &quot;50&quot; = 1,
+  &quot;65&quot; = 0.7
+)
+
+agressive_decrease_transmission_rate = list(
+  &quot;15&quot; = 1.5,
+  &quot;30&quot; = 1,
+  &quot;45&quot; = 0,7
+)
+
+amount_of_days = 30 * 4 # six months
+
+simulation_without_isolation = portuguese_simulation_covid19_data_generation(amount_of_days = amount_of_days)
+simulation_with_moderate_isolation = portuguese_simulation_covid19_data_generation(amount_of_days = amount_of_days, days_with_new_r0 = moderate_decrese_transmission_rate)
+simulation_with_aggressive_isolation = portuguese_simulation_covid19_data_generation(amount_of_days = amount_of_days, days_with_new_r0 = agressive_decrease_transmission_rate)
+
+#portugal has around 4.2 intensive care beds for each 100.000 persons
+portuguese_intensive_care_beds_entire_population = 10374822*4.2/100000
+
+comparison_simulation_isolation_measures = data.frame(
+  days = simulation_without_isolation$days,
+  infections_without_isolation = simulation_without_isolation$infectious_individuals,
+  infectious_with_moderate_isolation = simulation_with_moderate_isolation$infectious_individuals,
+  infectious_with_agressive_isolation = simulation_with_aggressive_isolation$infectious_individuals,
+  portugal_hospital_beds = rep(portuguese_intensive_care_beds_entire_population,length(simulation_without_isolation$susceptible_individuals))
+)
+
+portuguese_simulation_plot &lt;- plotly::subplot(
+  plotly::plot_ly(comparison_simulation_isolation_measures, x = ~days) %&gt;%
+    plotly::add_lines(y = ~infections_without_isolation, name=&quot;Without Isolation&quot;, line = list(color = &#39;black&#39;)) %&gt;%
+    plotly::add_lines(y = ~portugal_hospital_beds, name=&quot;Portugal Intensive Care Beds&quot;, line = list(color = &#39;red&#39;)),
+  plotly::plot_ly(comparison_simulation_isolation_measures, x = ~days) %&gt;%
+    plotly::add_lines(y = ~infectious_with_moderate_isolation, name=&quot;Moderate Isolation&quot;, line = list(color = &#39;orange&#39;)) %&gt;%
+    plotly::add_lines(y = ~infectious_with_agressive_isolation, name=&quot;Aggressive Isolation&quot;, line = list(color = &#39;blue&#39;)) %&gt;%
+    plotly::add_lines(y = ~portugal_hospital_beds, name=&quot;Portugal Intensive Care Beds&quot;, line = list(color = &#39;red&#39;)),
+  nrows=2,
+  shareX=T
+)</code></pre>
+<div id="htmlwidget-1" style="width:100%;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"data":[{"x":["2020-03-06","2020-03-07","2020-03-08","2020-03-09","2020-03-10","2020-03-11","2020-03-12","2020-03-13","2020-03-14","2020-03-15","2020-03-16","2020-03-17","2020-03-18","2020-03-19","2020-03-20","2020-03-21","2020-03-22","2020-03-23","2020-03-24","2020-03-25","2020-03-26","2020-03-27","2020-03-28","2020-03-29","2020-03-30","2020-03-31","2020-04-01","2020-04-02","2020-04-03","2020-04-04","2020-04-05","2020-04-06","2020-04-07","2020-04-08","2020-04-09","2020-04-10","2020-04-11","2020-04-12","2020-04-13","2020-04-14","2020-04-15","2020-04-16","2020-04-17","2020-04-18","2020-04-19","2020-04-20","2020-04-21","2020-04-22","2020-04-23","2020-04-24","2020-04-25","2020-04-26","2020-04-27","2020-04-28","2020-04-29","2020-04-30","2020-05-01","2020-05-02","2020-05-03","2020-05-04","2020-05-05","2020-05-06","2020-05-07","2020-05-08","2020-05-09","2020-05-10","2020-05-11","2020-05-12","2020-05-13","2020-05-14","2020-05-15","2020-05-16","2020-05-17","2020-05-18","2020-05-19","2020-05-20","2020-05-21","2020-05-22","2020-05-23","2020-05-24","2020-05-25","2020-05-26","2020-05-27","2020-05-28","2020-05-29","2020-05-30","2020-05-31","2020-06-01","2020-06-02","2020-06-03","2020-06-04","2020-06-05","2020-06-06","2020-06-07","2020-06-08","2020-06-09","2020-06-10","2020-06-11","2020-06-12","2020-06-13","2020-06-14","2020-06-15","2020-06-16","2020-06-17","2020-06-18","2020-06-19","2020-06-20","2020-06-21","2020-06-22","2020-06-23","2020-06-24","2020-06-25","2020-06-26","2020-06-27","2020-06-28","2020-06-29","2020-06-30","2020-07-01","2020-07-02","2020-07-03","2020-07-04"],"y":[13,62.2777777777778,99.5636182283734,128.672200730506,152.267701953735,172.214167658841,189.819375123609,206.004574384155,221.422648390717,236.540378490404,251.695731934981,267.137768727164,283.054455073375,299.592063097475,316.868717699671,334.983872873718,354.024957977867,374.072057400126,395.201224666079,417.486849441914,441.00336882249,465.826525878451,492.034316916387,519.707726103944,548.93131633658,579.793724513662,612.388094992738,646.812474983933,683.170188696812,721.570202230762,762.127487860694,804.96339406276,850.206026036947,897.990640396987,948.460056961565,1001.76509008898,1058.06500167674,1117.52797774741,1180.33163042663,1246.6635270641,1316.72174823699,1390.71547639448,1468.86561694559,1551.40545365309,1638.58134027097,1730.65343044869,1827.89644802103,1930.60049990588,2039.07193394359,2153.63424413029,2274.62902582248,2402.41698362284,2537.37899479583,2679.91723120793,2830.45634293964,2989.4447068769,3157.35574375614,3334.68930731233,3521.9731493608,3719.76446483394,3928.65152099107,4149.25537522522,4382.23168610407,4628.27262250342,4888.10887592113,5162.51178129647,5452.29555190514,5758.31963415252,6081.49118834824,6422.76770181158,6783.15974093131,7163.7338490828,7565.61559758996,7989.99279720905,8438.11887790345,8911.31644497345,9410.98101990001,9938.58497455579,10495.6816677277,11083.9097931807,11704.9979487706,12360.7694363789,13053.1473026958,13784.1596311101,14555.9450951723,15370.7587842826,16230.9783123986,17139.1102206642,18097.7966849211,19109.8225390605,20178.1226251112,21305.7894808136,22496.0813752016,23752.4307023775,25078.4527432184,26477.9548041678,27954.9457415341,29513.6458788132,31158.497323455,32894.1746881799,34725.5962203922,36657.935341406,38696.6325950627,40847.4080028388,43116.2738196872,45509.5476815765,48033.8661319481,50696.1985100503,53503.8611792866,56464.5320682572,59586.2654910445,62877.507206405,66347.1096678322,70004.3474078655,73858.9324904677,77921.0299547042,82201.2731612394,86710.7789402535,91461.162425179,96464.5514410915,101733.600299574],"type":"scatter","mode":"lines","name":"Without Isolation","line":{"color":"black"},"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2020-03-06","2020-03-07","2020-03-08","2020-03-09","2020-03-10","2020-03-11","2020-03-12","2020-03-13","2020-03-14","2020-03-15","2020-03-16","2020-03-17","2020-03-18","2020-03-19","2020-03-20","2020-03-21","2020-03-22","2020-03-23","2020-03-24","2020-03-25","2020-03-26","2020-03-27","2020-03-28","2020-03-29","2020-03-30","2020-03-31","2020-04-01","2020-04-02","2020-04-03","2020-04-04","2020-04-05","2020-04-06","2020-04-07","2020-04-08","2020-04-09","2020-04-10","2020-04-11","2020-04-12","2020-04-13","2020-04-14","2020-04-15","2020-04-16","2020-04-17","2020-04-18","2020-04-19","2020-04-20","2020-04-21","2020-04-22","2020-04-23","2020-04-24","2020-04-25","2020-04-26","2020-04-27","2020-04-28","2020-04-29","2020-04-30","2020-05-01","2020-05-02","2020-05-03","2020-05-04","2020-05-05","2020-05-06","2020-05-07","2020-05-08","2020-05-09","2020-05-10","2020-05-11","2020-05-12","2020-05-13","2020-05-14","2020-05-15","2020-05-16","2020-05-17","2020-05-18","2020-05-19","2020-05-20","2020-05-21","2020-05-22","2020-05-23","2020-05-24","2020-05-25","2020-05-26","2020-05-27","2020-05-28","2020-05-29","2020-05-30","2020-05-31","2020-06-01","2020-06-02","2020-06-03","2020-06-04","2020-06-05","2020-06-06","2020-06-07","2020-06-08","2020-06-09","2020-06-10","2020-06-11","2020-06-12","2020-06-13","2020-06-14","2020-06-15","2020-06-16","2020-06-17","2020-06-18","2020-06-19","2020-06-20","2020-06-21","2020-06-22","2020-06-23","2020-06-24","2020-06-25","2020-06-26","2020-06-27","2020-06-28","2020-06-29","2020-06-30","2020-07-01","2020-07-02","2020-07-03","2020-07-04"],"y":[435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524],"type":"scatter","mode":"lines","name":"Portugal Intensive Care Beds","line":{"color":"red"},"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2020-03-06","2020-03-07","2020-03-08","2020-03-09","2020-03-10","2020-03-11","2020-03-12","2020-03-13","2020-03-14","2020-03-15","2020-03-16","2020-03-17","2020-03-18","2020-03-19","2020-03-20","2020-03-21","2020-03-22","2020-03-23","2020-03-24","2020-03-25","2020-03-26","2020-03-27","2020-03-28","2020-03-29","2020-03-30","2020-03-31","2020-04-01","2020-04-02","2020-04-03","2020-04-04","2020-04-05","2020-04-06","2020-04-07","2020-04-08","2020-04-09","2020-04-10","2020-04-11","2020-04-12","2020-04-13","2020-04-14","2020-04-15","2020-04-16","2020-04-17","2020-04-18","2020-04-19","2020-04-20","2020-04-21","2020-04-22","2020-04-23","2020-04-24","2020-04-25","2020-04-26","2020-04-27","2020-04-28","2020-04-29","2020-04-30","2020-05-01","2020-05-02","2020-05-03","2020-05-04","2020-05-05","2020-05-06","2020-05-07","2020-05-08","2020-05-09","2020-05-10","2020-05-11","2020-05-12","2020-05-13","2020-05-14","2020-05-15","2020-05-16","2020-05-17","2020-05-18","2020-05-19","2020-05-20","2020-05-21","2020-05-22","2020-05-23","2020-05-24","2020-05-25","2020-05-26","2020-05-27","2020-05-28","2020-05-29","2020-05-30","2020-05-31","2020-06-01","2020-06-02","2020-06-03","2020-06-04","2020-06-05","2020-06-06","2020-06-07","2020-06-08","2020-06-09","2020-06-10","2020-06-11","2020-06-12","2020-06-13","2020-06-14","2020-06-15","2020-06-16","2020-06-17","2020-06-18","2020-06-19","2020-06-20","2020-06-21","2020-06-22","2020-06-23","2020-06-24","2020-06-25","2020-06-26","2020-06-27","2020-06-28","2020-06-29","2020-06-30","2020-07-01","2020-07-02","2020-07-03","2020-07-04"],"y":[13,62.2777777777778,99.5636182283734,128.672200730506,152.267701953735,172.214167658841,189.819375123609,206.004574384155,221.422648390717,236.540378490404,251.695731934981,267.137768727164,283.054455073375,299.592063097475,316.868717699671,334.983872873718,354.024957977867,374.072057400126,395.201224666079,417.486849441914,441.00336882249,463.150560924094,484.518990680243,505.538209938969,526.522975075959,547.706288839182,569.263025948783,591.326829373628,614.002197623563,637.373135525568,661.509349392956,686.470687652831,712.310327995273,739.077069168413,766.816983386637,795.5746123089,821.298326220439,844.893579933994,867.025193069826,888.181829607424,908.723210275768,928.914682014105,948.952530347852,968.982513780753,989.113435390301,1009.42708069836,1029.98549495774,1050.83631238442,1072.0166590467,1093.55601140672,1115.47829020999,1131.96344669971,1144.3590058463,1153.67850410381,1160.68426978142,1165.94968593226,1169.90602111385,1172.87765294644,1175.10856136912,1176.78225543979,1178.0367612046,1178.97589477252,1179.67774132227,1180.2010325623,1180.58994352012,1180.87770043568,1177.30680387095,1170.83271002112,1162.18643138176,1151.92710340736,1140.48224171039,1128.17857226505,1115.26564210307,1101.93390106868,1088.32854932565,1074.5601421352,1060.71271124307,1046.84998440254,1033.0201483862,1019.25949655253,1005.59522216749,992.047557516954,978.631412004373,965.357626555166,952.233934176659,939.265695482972,926.45646188143,913.808406777413,901.322655704337,888.999539048237,876.838785493817,864.839670074182,853.001127455732,841.321838600147,829.800297038875,818.434859535366,807.22378479213,796.165263003302,785.257438397579,774.498426414117,763.886326769347,753.419233378063,743.095241866555,732.912455242782,722.86898815626,712.962970079016,703.192547661346,693.555886456696,684.051172164457,674.676611504617,665.430432811515,656.310886413501,647.316244849645,638.444802962658,629.694877897992,621.064809032063,612.552957847155,604.157707766444,595.877463959405,587.710653125466,579.655723261915],"type":"scatter","mode":"lines","name":"Moderate Isolation","line":{"color":"orange"},"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y2","frame":null},{"x":["2020-03-06","2020-03-07","2020-03-08","2020-03-09","2020-03-10","2020-03-11","2020-03-12","2020-03-13","2020-03-14","2020-03-15","2020-03-16","2020-03-17","2020-03-18","2020-03-19","2020-03-20","2020-03-21","2020-03-22","2020-03-23","2020-03-24","2020-03-25","2020-03-26","2020-03-27","2020-03-28","2020-03-29","2020-03-30","2020-03-31","2020-04-01","2020-04-02","2020-04-03","2020-04-04","2020-04-05","2020-04-06","2020-04-07","2020-04-08","2020-04-09","2020-04-10","2020-04-11","2020-04-12","2020-04-13","2020-04-14","2020-04-15","2020-04-16","2020-04-17","2020-04-18","2020-04-19","2020-04-20","2020-04-21","2020-04-22","2020-04-23","2020-04-24","2020-04-25","2020-04-26","2020-04-27","2020-04-28","2020-04-29","2020-04-30","2020-05-01","2020-05-02","2020-05-03","2020-05-04","2020-05-05","2020-05-06","2020-05-07","2020-05-08","2020-05-09","2020-05-10","2020-05-11","2020-05-12","2020-05-13","2020-05-14","2020-05-15","2020-05-16","2020-05-17","2020-05-18","2020-05-19","2020-05-20","2020-05-21","2020-05-22","2020-05-23","2020-05-24","2020-05-25","2020-05-26","2020-05-27","2020-05-28","2020-05-29","2020-05-30","2020-05-31","2020-06-01","2020-06-02","2020-06-03","2020-06-04","2020-06-05","2020-06-06","2020-06-07","2020-06-08","2020-06-09","2020-06-10","2020-06-11","2020-06-12","2020-06-13","2020-06-14","2020-06-15","2020-06-16","2020-06-17","2020-06-18","2020-06-19","2020-06-20","2020-06-21","2020-06-22","2020-06-23","2020-06-24","2020-06-25","2020-06-26","2020-06-27","2020-06-28","2020-06-29","2020-06-30","2020-07-01","2020-07-02","2020-07-03","2020-07-04"],"y":[13,62.2777777777778,99.5636182283734,128.672200730506,152.267701953735,172.214167658841,189.819375123609,206.004574384155,221.422648390717,236.540378490404,251.695731934981,267.137768727164,283.054455073375,299.592063097475,316.868717699671,334.983872873718,350.30130538453,363.611205107996,375.49295851726,386.371619693404,396.559258276221,406.285234433761,415.718366289086,424.983161075747,434.171699809962,443.352339509559,452.576085253135,461.881256121863,471.296901942847,480.845305386455,490.54381437438,497.837850521442,503.323369308187,507.448612921579,510.550722455939,512.883275409789,514.636997736715,515.955342206933,516.946205517007,517.690741198376,518.249988160402,518.669856284936,518.984876293577,519.221020174875,519.397822542294,519.529976194017,514.080251776698,504.430779819719,491.680746939933,476.701760886976,460.182515533685,442.664816455067,424.572631298353,406.235508953399,387.907452923665,369.782125429576,352.005090082274,334.683664720312,317.894845964282,301.691678174273,286.108367721485,271.164385520091,256.867753952787,243.217676518404,230.206637999885,217.822078296657,206.047723156623,194.864638966933,184.252065781988,174.1880722864,164.6500679288,155.615200631135,147.060662963566,138.963925223951,131.302910268476,124.056122041025,117.202737409818,110.722669032916,104.59660545232,98.8060333892134,93.3332462236679,88.1613418449968,83.274212416769,78.6565280835187,74.2937162301257,70.1719375702711,66.2780600715116,62.5996315086596,59.1248512640412,55.8425418545348,52.7421205543928,49.8135713943017,47.0474177466007,44.4346956505275,41.9669279869575,39.6360995770659,37.4346332518167,35.3553669176862,33.3915316273593,31.5367306513261,29.7849195365815,28.1303871313535,26.5677375494664,25.091873044165,23.6979777586663,22.3815023191013,21.1381492346565,19.9638590694426,18.8547973507919,17.8073421791844,16.8180725057661,15.8837570443576,15.0013437859289,14.167950084671,13.380853286012,12.6374818681673,11.935407070066,11.2723349797402,10.6460990584902,10.0546530773391,9.49606444345522],"type":"scatter","mode":"lines","name":"Aggressive Isolation","line":{"color":"blue"},"marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"xaxis":"x","yaxis":"y2","frame":null},{"x":["2020-03-06","2020-03-07","2020-03-08","2020-03-09","2020-03-10","2020-03-11","2020-03-12","2020-03-13","2020-03-14","2020-03-15","2020-03-16","2020-03-17","2020-03-18","2020-03-19","2020-03-20","2020-03-21","2020-03-22","2020-03-23","2020-03-24","2020-03-25","2020-03-26","2020-03-27","2020-03-28","2020-03-29","2020-03-30","2020-03-31","2020-04-01","2020-04-02","2020-04-03","2020-04-04","2020-04-05","2020-04-06","2020-04-07","2020-04-08","2020-04-09","2020-04-10","2020-04-11","2020-04-12","2020-04-13","2020-04-14","2020-04-15","2020-04-16","2020-04-17","2020-04-18","2020-04-19","2020-04-20","2020-04-21","2020-04-22","2020-04-23","2020-04-24","2020-04-25","2020-04-26","2020-04-27","2020-04-28","2020-04-29","2020-04-30","2020-05-01","2020-05-02","2020-05-03","2020-05-04","2020-05-05","2020-05-06","2020-05-07","2020-05-08","2020-05-09","2020-05-10","2020-05-11","2020-05-12","2020-05-13","2020-05-14","2020-05-15","2020-05-16","2020-05-17","2020-05-18","2020-05-19","2020-05-20","2020-05-21","2020-05-22","2020-05-23","2020-05-24","2020-05-25","2020-05-26","2020-05-27","2020-05-28","2020-05-29","2020-05-30","2020-05-31","2020-06-01","2020-06-02","2020-06-03","2020-06-04","2020-06-05","2020-06-06","2020-06-07","2020-06-08","2020-06-09","2020-06-10","2020-06-11","2020-06-12","2020-06-13","2020-06-14","2020-06-15","2020-06-16","2020-06-17","2020-06-18","2020-06-19","2020-06-20","2020-06-21","2020-06-22","2020-06-23","2020-06-24","2020-06-25","2020-06-26","2020-06-27","2020-06-28","2020-06-29","2020-06-30","2020-07-01","2020-07-02","2020-07-03","2020-07-04"],"y":[435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524,435.742524],"type":"scatter","mode":"lines","name":"Portugal Intensive Care Beds","line":{"color":"red"},"marker":{"color":"rgba(148,103,189,1)","line":{"color":"rgba(148,103,189,1)"}},"error_y":{"color":"rgba(148,103,189,1)"},"error_x":{"color":"rgba(148,103,189,1)"},"xaxis":"x","yaxis":"y2","frame":null}],"layout":{"xaxis":{"domain":[0,1],"automargin":true,"title":"days","anchor":"y2"},"yaxis2":{"domain":[0,0.48],"automargin":true,"anchor":"x"},"yaxis":{"domain":[0.52,1],"automargin":true,"anchor":"x"},"annotations":[],"shapes":[],"images":[],"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"attrs":{"4854d194c1a":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"type":"scatter","mode":"lines","name":"Without Isolation","line":{"color":"black"},"inherit":true},"4854d194c1a.1":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"type":"scatter","mode":"lines","name":"Portugal Intensive Care Beds","line":{"color":"red"},"inherit":true},"4854305d9e4a":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"type":"scatter","mode":"lines","name":"Moderate Isolation","line":{"color":"orange"},"inherit":true},"4854305d9e4a.1":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"type":"scatter","mode":"lines","name":"Aggressive Isolation","line":{"color":"blue"},"inherit":true},"4854305d9e4a.2":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"type":"scatter","mode":"lines","name":"Portugal Intensive Care Beds","line":{"color":"red"},"inherit":true}},"source":"A","config":{"showSendToCloud":false},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"subplot":true,"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>We ran three simulations, with the main parameters of the model being obtained from <a href="https://www.nature.com/articles/s41421-020-0148-0">this paper</a> (which takes into consideration the situation in China).</p>
+<p>It is important to understand that these are just simulations taking into consideration those parameters, and the current number of <strong>confirmed</strong> infectious people in Portugal by 2020-03-13.</p>
+<p>The forecast potential of these simulation is, at the best of my knowledge, pretty fuzzy due to the lack of data currently to understand what would be more fitted parameters for Portugal.</p>
+<p>Under these conditions, we can see that dropping the <span class="math inline">\(R_0\)</span> by acting now - starting to take isolation measures now - can have a huge difference in the months to come.</p>
+<p>Please, let’s be considerative these next weeks so that everyone of us can see each other again, and hi-5 people and hug people, as fast as possible.</p>
+<p>We are in this together people.</p>
+<p>Stay Safe!</p>
+</div>
+</div>
+</div>
+</article>
+					
+						<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size=''></a>
+	
+	
+	</div>
+	
+  	<script type="text/javascript" src='http://s7.addthis.com/js/250/addthis_widget.js#pubid='></script>
+  	
+</div>
+
+					
+					
+					
+					<section id="comment">
+					    <h1 class="title">Comments</h1>
+					    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+					</section>
+					
+					
+
+<script type="text/javascript">
+    
+    var disqus_shortname = 'tdsguru';
+
+    
+    
+
+    
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+    
+</script>
+
+
+					
+				    </div>
+				</div>
+			</div>
+			<footer id="footer" class="inner">Copyright &copy; 2020
+
+    Tiago dos Santos
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    });
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a>
+<script src="/js/slash.js"></script>
+<script src="/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script>
+</footer>
+		</div>
+	</div>
+	
+</body>
+</html>
