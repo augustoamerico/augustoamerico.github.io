@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/categories/</loc>
+    <loc>https://blog.tdsantos.com/categories/</loc>
     <lastmod>2020-03-14T12:25:14-05:00</lastmod>
   </url><url>
-    <loc>/post/</loc>
+    <loc>https://blog.tdsantos.com/post/</loc>
     <lastmod>2020-03-14T12:25:14-05:00</lastmod>
   </url><url>
-    <loc>/post/2020-03-14-covid19simulationsseir/</loc>
+    <loc>https://blog.tdsantos.com/post/2020-03-14-covid19simulationsseir/</loc>
     <lastmod>2020-03-14T12:25:14-05:00</lastmod>
   </url><url>
-    <loc>/categories/stats/</loc>
+    <loc>https://blog.tdsantos.com/categories/stats/</loc>
     <lastmod>2020-03-14T12:25:14-05:00</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>https://blog.tdsantos.com/</loc>
     <lastmod>2020-03-14T12:25:14-05:00</lastmod>
   </url><url>
-    <loc>/post/2018-11-18-statscourse/</loc>
+    <loc>https://blog.tdsantos.com/post/2018-11-18-statscourse/</loc>
     <lastmod>2018-11-18T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>/categories/challenge/</loc>
+    <loc>https://blog.tdsantos.com/categories/challenge/</loc>
     <lastmod>2017-12-03T10:00:00-05:00</lastmod>
   </url><url>
-    <loc>/post/2017-12-03-feedzai/</loc>
+    <loc>https://blog.tdsantos.com/post/2017-12-03-feedzai/</loc>
     <lastmod>2017-12-03T10:00:00-05:00</lastmod>
   </url><url>
-    <loc>/categories/feedzai/</loc>
+    <loc>https://blog.tdsantos.com/categories/feedzai/</loc>
     <lastmod>2017-12-03T10:00:00-05:00</lastmod>
   </url><url>
-    <loc>/categories/life/</loc>
+    <loc>https://blog.tdsantos.com/categories/life/</loc>
     <lastmod>2017-12-03T10:00:00-05:00</lastmod>
   </url><url>
-    <loc>/about/</loc>
+    <loc>https://blog.tdsantos.com/about/</loc>
     <lastmod>2017-10-17T21:13:14-05:00</lastmod>
   </url>
 </urlset>

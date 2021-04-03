@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stats on Tiago dos Santos</title>
-    <link>/categories/stats/</link>
+    <link>https://blog.tdsantos.com/categories/stats/</link>
     <description>Recent content in Stats on Tiago dos Santos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>santos.tmd@gmail.com (Tiago dos Santos)</managingEditor>
     <webMaster>santos.tmd@gmail.com (Tiago dos Santos)</webMaster>
-    <lastBuildDate>Sat, 14 Mar 2020 12:25:14 -0500</lastBuildDate><atom:link href="/categories/stats/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Mar 2020 12:25:14 -0500</lastBuildDate><atom:link href="https://blog.tdsantos.com/categories/stats/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simulations of Infected Individuals by COVID-19 in Portugal using the SEIR Model</title>
-      <link>/post/2020-03-14-covid19simulationsseir/</link>
+      <link>https://blog.tdsantos.com/post/2020-03-14-covid19simulationsseir/</link>
       <pubDate>Sat, 14 Mar 2020 12:25:14 -0500</pubDate>
       <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
-      <guid>/post/2020-03-14-covid19simulationsseir/</guid>
+      <guid>https://blog.tdsantos.com/post/2020-03-14-covid19simulationsseir/</guid>
       <description>Simulating some COVID-19 scenarios in Portugal with the SEIR Model While on reddit, I came across this paper called “Phase-adjusted estimation of the number of Coronavirus Disease 2019 cases in Wuhan, China”, where the authors applied a model to rum some simulations and reason about if the public health interventions indeed suffice or not.
 In the paper, the model used is the SEIR Model - that I had never heard about until today (well, I started this by 9PM on 2020-03-13, and now it is 2AM 2020-03-14)… Until I gave it a try, some googling and youtubing until I understand it.</description>
     </item>
     
     <item>
       <title>Getting (more) confortable with statistics</title>
-      <link>/post/2018-11-18-statscourse/</link>
+      <link>https://blog.tdsantos.com/post/2018-11-18-statscourse/</link>
       <pubDate>Sun, 18 Nov 2018 21:13:14 -0500</pubDate>
       <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
-      <guid>/post/2018-11-18-statscourse/</guid>
+      <guid>https://blog.tdsantos.com/post/2018-11-18-statscourse/</guid>
       <description>During this summer, I’ve taken the decision of getting better at Statistics. My relationship with statistics was a kind of relation that I coukd stare at it and maybe get an intuition of what’s going on, but no more than that. Anything that involved, for example, understanding how is a Pearson’ correlation matrix calculated and what’s the meaning of the math behind that gave me the chills since I really had bad foundations.</description>
     </item>
     

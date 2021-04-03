@@ -2,46 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Tiago dos Santos</title>
-    <link>/categories/</link>
+    <link>https://blog.tdsantos.com/categories/</link>
     <description>Recent content in Categories on Tiago dos Santos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>santos.tmd@gmail.com (Tiago dos Santos)</managingEditor>
     <webMaster>santos.tmd@gmail.com (Tiago dos Santos)</webMaster>
-    <lastBuildDate>Sat, 14 Mar 2020 12:25:14 -0500</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Mar 2020 12:25:14 -0500</lastBuildDate><atom:link href="https://blog.tdsantos.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Stats</title>
-      <link>/categories/stats/</link>
+      <link>https://blog.tdsantos.com/categories/stats/</link>
       <pubDate>Sat, 14 Mar 2020 12:25:14 -0500</pubDate>
       <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
-      <guid>/categories/stats/</guid>
+      <guid>https://blog.tdsantos.com/categories/stats/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Challenge</title>
-      <link>/categories/challenge/</link>
+      <link>https://blog.tdsantos.com/categories/challenge/</link>
       <pubDate>Sun, 03 Dec 2017 10:00:00 -0500</pubDate>
       <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
-      <guid>/categories/challenge/</guid>
+      <guid>https://blog.tdsantos.com/categories/challenge/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Feedzai</title>
-      <link>/categories/feedzai/</link>
+      <link>https://blog.tdsantos.com/categories/feedzai/</link>
       <pubDate>Sun, 03 Dec 2017 10:00:00 -0500</pubDate>
       <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
-      <guid>/categories/feedzai/</guid>
+      <guid>https://blog.tdsantos.com/categories/feedzai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Life</title>
-      <link>/categories/life/</link>
+      <link>https://blog.tdsantos.com/categories/life/</link>
       <pubDate>Sun, 03 Dec 2017 10:00:00 -0500</pubDate>
       <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
-      <guid>/categories/life/</guid>
+      <guid>https://blog.tdsantos.com/categories/life/</guid>
       <description></description>
     </item>
     
