@@ -6,14 +6,12 @@
     <description>Recent content on Tiago dos Santos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>santos.tmd@gmail.com (Tiago dos Santos)</managingEditor>
-    <webMaster>santos.tmd@gmail.com (Tiago dos Santos)</webMaster>
     <lastBuildDate>Sat, 14 Mar 2020 12:25:14 -0500</lastBuildDate><atom:link href="https://blog.tdsantos.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simulations of Infected Individuals by COVID-19 in Portugal using the SEIR Model</title>
       <link>https://blog.tdsantos.com/post/2020-03-14-covid19simulationsseir/</link>
       <pubDate>Sat, 14 Mar 2020 12:25:14 -0500</pubDate>
-      <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
+      
       <guid>https://blog.tdsantos.com/post/2020-03-14-covid19simulationsseir/</guid>
       <description>Simulating some COVID-19 scenarios in Portugal with the SEIR Model While on reddit, I came across this paper called “Phase-adjusted estimation of the number of Coronavirus Disease 2019 cases in Wuhan, China”, where the authors applied a model to rum some simulations and reason about if the public health interventions indeed suffice or not.
 In the paper, the model used is the SEIR Model - that I had never heard about until today (well, I started this by 9PM on 2020-03-13, and now it is 2AM 2020-03-14)… Until I gave it a try, some googling and youtubing until I understand it.</description>
@@ -23,7 +21,7 @@ In the paper, the model used is the SEIR Model - that I had never heard about un
       <title>Getting (more) confortable with statistics</title>
       <link>https://blog.tdsantos.com/post/2018-11-18-statscourse/</link>
       <pubDate>Sun, 18 Nov 2018 21:13:14 -0500</pubDate>
-      <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
+      
       <guid>https://blog.tdsantos.com/post/2018-11-18-statscourse/</guid>
       <description>During this summer, I’ve taken the decision of getting better at Statistics. My relationship with statistics was a kind of relation that I coukd stare at it and maybe get an intuition of what’s going on, but no more than that. Anything that involved, for example, understanding how is a Pearson’ correlation matrix calculated and what’s the meaning of the math behind that gave me the chills since I really had bad foundations.</description>
     </item>
@@ -32,7 +30,7 @@ In the paper, the model used is the SEIR Model - that I had never heard about un
       <title>Embracing a new challenge: Feedzai!</title>
       <link>https://blog.tdsantos.com/post/2017-12-03-feedzai/</link>
       <pubDate>Sun, 03 Dec 2017 10:00:00 -0500</pubDate>
-      <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
+      
       <guid>https://blog.tdsantos.com/post/2017-12-03-feedzai/</guid>
       <description>Since 2016 I’ve been focusing on data science and distributed computing, a path that I’ve decided to take back in late 2014 when I got back do University to take a Masters in Computer Science. At the time, I was looking to learn a bit about machine learning and tons about distributed system and web development - but while I was learning more about Operational Research and Machine Learning, my direction changed a little bit and I begin to study Data Visualization and Data Warehouse.</description>
     </item>
@@ -41,7 +39,7 @@ In the paper, the model used is the SEIR Model - that I had never heard about un
       <title>About Me</title>
       <link>https://blog.tdsantos.com/about/</link>
       <pubDate>Tue, 17 Oct 2017 21:13:14 -0500</pubDate>
-      <author>santos.tmd@gmail.com (Tiago dos Santos)</author>
+      
       <guid>https://blog.tdsantos.com/about/</guid>
       <description>Hi, my name is Tiago dos Santos and I’m a curious mind with around 6 years of working experience. I’ve finished my Master’s in Computer Science and now, after a career break, I am looking for a challenging environment where I can discuss ideas, learn state-of-the-art techniques, and where I can make the difference in the Data Science field – being it modelling a problem and/or engineering and implementing the algorithms in a (near) production-ready fashion.</description>
     </item>
