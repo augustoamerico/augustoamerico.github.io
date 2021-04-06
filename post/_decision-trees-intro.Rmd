@@ -1,0 +1,72 @@
+---
+title: "About Decision Trees"
+author: "Tiago dos Santos"
+date: 2018-01-10T10:00:00-05:00
+categories: ["ML"]
+tags: ["decision tree", "algorithm", "classification"]
+draft: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+# Understanding Decision Trees
+
+A Decision tree is a modal that can ...
+
+
+## Splitting the dataset: Entropy
+
+The essence of a decision tree is the process of splitting the data into subsets to arrange the leafs as pure nodes - or almost pure nodes. 
+In a real world scenario, we must assume that it is not possible to have all leafs as pure node because there are problems that are that difficult to solve.
+
+A case example for  
+
+```{r entropy-example}
+data <- list(
+  c(rep("a",10),rep("b",0)),
+  c(rep("a",9),rep("b",1)),
+  c(rep("a",8),rep("b",2)),
+  c(rep("a",7),rep("b",3)),
+  c(rep("a",6),rep("b",4)),
+  c(rep("a",5),rep("b",5)),
+  c(rep("a",4),rep("b",6)),
+  c(rep("a",3),rep("b",7)),
+  c(rep("a",2),rep("b",8)),
+  c(rep("a",1),rep("b",9)),
+  c(rep("a",0),rep("b",10))
+  )
+
+info <- function(CLASS.FREQ){
+    freq.class <- CLASS.FREQ
+    info <- 0
+    for(i in 1:length(freq.class)){
+        if(length(freq.class[[i]]) != 0){ # zero check in class
+            entropy <- -sum(freq.class[[i]] * log2(freq.class[[i]]))  #I calculate the entropy for each class i here
+        }else{ 
+            entropy <- 0
+        } 
+        info <- info + entropy # sum up entropy from all classes
+    }
+    return(info)
+}
+
+freq <- lapply( data, function(x){rowMeans(outer(unique(x),x,"=="))})
+plotly::plot_ly(y = unlist(lapply(freq, info)), x = 0:10, type="scatter", mode="markers+lines")
+
+```
+
+# Including Plots
+
+You can also embed plots. See Figure \@ref(fig:pie) for example:
+
+```{r pie, fig.cap='A fancy pie chart.', tidy=FALSE}
+par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),
+  col = c('#0292D8', '#F7EA39', '#C4B632'),
+  init.angle = -50, border = NA
+)
+```

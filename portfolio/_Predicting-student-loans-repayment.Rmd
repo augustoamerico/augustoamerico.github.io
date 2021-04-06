@@ -1,0 +1,74 @@
+---
+title: "Predict Students’ Ability to Repay Educational Loans"
+author: "Tiago dos Santos"
+date: 2017-10-18T21:13:14-05:00
+categories: ["R","Data Analysis", "Modelling"]
+description: "https://media.salon.com/2013/02/campos_student_loans.jpg"
+tags: ["portfolio"]
+draft: true
+type: "post"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+library("data.table")
+library("RColorBrewer")
+library("plotly")
+library("MLmetrics")
+
+PATH_TO_DATA <- "~/Professional/DSPortfolio/Most-Recent-Cohorts-All-Data-Elements.csv"
+```
+
+```{r loading-data}
+s_data <- data.table::fread(PATH_TO_DATA)
+s_data.ncol <- ncol(s_data)
+
+variables <- names(s_data)
+
+any_missing_value <- lapply(
+  variables,
+  function(variable){
+    all(complete.cases(s_data[[variable]]))
+  }
+)
+
+
+
+is_any_missing_value <- all(unlist(any_missing_value))
+
+cor(,method = c("pearson"))
+
+inst_count <- unlist(lapply(
+  s_data$INSTNM,
+  function(inst){
+    length(which(s_data$INSTNM == inst))
+  }
+))
+
+View(s_data_inst_dcr3_count <- cbind(s_data[,c("UNITID","OPEID","INSTNM","CITY","CDR3")],inst_count))
+
+```
+
+Yup, This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+fit <- lm(dist ~ speed, data = cars)
+fit
+```
+
+# Including Plots
+
+You can also embed plots. See Figure \@ref(fig:pie) for example:
+
+```{r pie, fig.cap='A fancy pie chart.', tidy=FALSE}
+par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),
+  col = c('#0292D8', '#F7EA39', '#C4B632'),
+  init.angle = -50, border = NA
+)
+```

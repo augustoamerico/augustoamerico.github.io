@@ -1,0 +1,54 @@
+---
+title: "About Me"
+author: "Tiago dos Santos"
+date: '2017-10-17T21:13:14-05:00'
+type: about
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+Hi, my name is Tiago dos Santos and I'm a curious mind with around 6 years of
+working experience. I’ve finished my [Master’s in Computer Science](https://www.di.fct.unl.pt/ensino/mestrado-integrado-em-engenharia-informatica) and now, after a career break, I am looking for a challenging environment where I can discuss ideas, learn state-of-the-art techniques, and where I can make the difference in the Data Science field – being it modelling a problem and/or engineering and implementing the algorithms in a (near) production-ready fashion.
+
+
+The Master’s I’ve took gave me the opportunity to develop projects and acquire further knowledge in areas of study such as distributed systems, parallel/concurrent processing, data processing / warehousing, data visualisation and machine learning. My Master’s final grade is 17 out of 20.
+
+
+Since 2016 I've been focused on Data Science, which is a subject for which I find myself pretty curious about and with a variety of topics that make me eager to learn.
+The first professional project where I’ve been involved was my Master's Thesis Dissertation, which was scored as 20 out of 20 (it was the sixth 20/20 grade since 1976 in the course).
+
+The goal of my Master's Thesis was to develop a model capable of detecting Stator Winding Short-Circuit faults in Induction Motors. To do so, I had to study electric circuits and electric machines, particularly three-phase induction motors and their working principle.
+After the data understanding phase and a state-of-the-art study, an assessment about the predictive power of extracted features was performed using a SVM. Given the best set of features, the most promising models for this context were determined, where after a parameter and hyper-parameter tuning the Gradient Boosting Machine and Random Forest revealed both the best performance. 
+Due to its inherently parallelizable nature the Random Forest was chosen. 
+The raw dataset had 29440 instances with 6 features, but due to modeling options the processed dataset had 1472 instances with 25 extracted features. 
+All the analysis was made in R and the documentation made with [Bookdown](https://bookdown.org/yihui/bookdown/).
+
+To automatize the process of data fetching and data understanding, I developed an ETL service
+(node.js) as well as a dashboard for data exploration and filtering (R, Plotly, Shiny).
+Since my Master’s Thesis Dissertation was developed within an Industry Partnership with Altran Portugal, I was also responsible to present/explain my research on a regular basis to the company’s Managers not only to keep the staff updated about the on-going R&D projects, but also to guarantee European R&D Fundings.
+
+Outside of my Master Thesis' context but in the context of the Altran Portugal's Project, I've also develop a non-stationary learning model  based on the Thesis's model, in which the dataset had 2000 instances with 50 extracted features.
+
+My Dissertation culminated into two papers:
+
++ “[Stator Winding Short-Circuit Fault Diagnosis in Induction Motors using Random Forest](http://ieeexplore.ieee.org/document/8002350/)”, which was presented at IEMDC 2017, Miami.
++ “[Severity Estimation of Stator Winding Short-Circuit Faults using Cubist](https://link.springer.com/chapter/10.1007/978-3-319-65340-2_18)”, which was presented in EPIA 2017, Porto.
+
+During my thesis, I’ve started taking the Machine Learning Coursera Specialization. From this specialization, I’ve already conclude the following courses:
+
++ [Machine Learning Foundations: A Case Study Approach](https://www.coursera.org/account/accomplishments/verify/EFE55L58GZBA)
++ [Machine Learning: Classification](https://www.coursera.org/account/accomplishments/verify/REFSWEFWVAXN)
++ [Machine Learning: Regression](https://www.coursera.org/account/accomplishments/verify/JZT8S8K76PF4)
+
+From this specialization I’ve only one course left to finish, which is Machine Learning: Clustering & Retrieval.
+  
+During my Master’s, I had the opportunity to negotiate, close, lead and develop a project as a freelancer where Fluxphera company needed an online platform to provide a multiplayer gamification process and to manage the users and their data.
+One of the requisites of this platform was the scalability, since the workload during the day was variable (docker, docker-compose, node.js). 
+Due to the lack of IT collaborators on the company, the delivered solution was based on the AWS EC2 computing instances: an instance where the Load Balancer Service was running, and (by default one) instance where the web app service was running. 
+When the workload of the web app service instances was higher than a given threshold, another web app instance could be launched.
+
+I’m also an active listener of the [Data Skeptic Podcast](https://dataskeptic.com/) (I’m a Patron of the project) and I’m an enthusiast of the youtube channels [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw), [MITCSAILS](https://www.youtube.com/user/MITCSAIL), and [TwoMinutePapers](https://www.youtube.com/user/keeroyz).
+
+I like to stay updated, and to do so my mainly reading routines consist on [Hacker News (Y Combinator)](https://news.ycombinator.com/), [DataTau](http://www.datatau.com/) and [Reddit](https://www.reddit.com/).
