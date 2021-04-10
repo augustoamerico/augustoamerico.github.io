@@ -2,8 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.tdsantos.com/tags/blog/</loc>
+    <lastmod>2021-04-10T10:00:00-05:00</lastmod>
+  </url><url>
     <loc>https://blog.tdsantos.com/categories/</loc>
-    <lastmod>2020-03-14T12:25:14-05:00</lastmod>
+    <lastmod>2021-04-10T10:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -15,11 +18,20 @@
                 href="https://blog.tdsantos.com/categories/"
                 />
   </url><url>
-    <loc>https://blog.tdsantos.com/tags/data-science/</loc>
-    <lastmod>2020-03-14T12:25:14-05:00</lastmod>
+    <loc>https://blog.tdsantos.com/categories/challenge/</loc>
+    <lastmod>2021-04-10T10:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.tdsantos.com/tags/challenge/</loc>
+    <lastmod>2021-04-10T10:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.tdsantos.com/categories/feedzai/</loc>
+    <lastmod>2021-04-10T10:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.tdsantos.com/tags/feedzai/</loc>
+    <lastmod>2021-04-10T10:00:00-05:00</lastmod>
   </url><url>
     <loc>https://blog.tdsantos.com/</loc>
-    <lastmod>2020-03-14T12:25:14-05:00</lastmod>
+    <lastmod>2021-04-10T10:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -31,23 +43,39 @@
                 href="https://blog.tdsantos.com/"
                 />
   </url><url>
-    <loc>https://blog.tdsantos.com/tags/learning/</loc>
-    <lastmod>2020-03-14T12:25:14-05:00</lastmod>
+    <loc>https://blog.tdsantos.com/categories/life/</loc>
+    <lastmod>2021-04-10T10:00:00-05:00</lastmod>
   </url><url>
-    <loc>https://blog.tdsantos.com/tags/multivariate/</loc>
-    <lastmod>2020-03-14T12:25:14-05:00</lastmod>
+    <loc>https://blog.tdsantos.com/tags/mission/</loc>
+    <lastmod>2021-04-10T10:00:00-05:00</lastmod>
   </url><url>
     <loc>https://blog.tdsantos.com/post/</loc>
-    <lastmod>2020-03-14T12:25:14-05:00</lastmod>
+    <lastmod>2021-04-10T10:00:00-05:00</lastmod>
   </url><url>
-    <loc>https://blog.tdsantos.com/post/2020-03-14-covid19simulationsseir/</loc>
-    <lastmod>2020-03-14T12:25:14-05:00</lastmod>
+    <loc>https://blog.tdsantos.com/series/</loc>
+    <lastmod>2021-04-10T10:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://blog.tdsantos.com/fr/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.tdsantos.com/series/"
+                />
   </url><url>
-    <loc>https://blog.tdsantos.com/categories/stats/</loc>
-    <lastmod>2020-03-14T12:25:14-05:00</lastmod>
+    <loc>https://blog.tdsantos.com/post/2020-04-10-series-test/</loc>
+    <lastmod>2021-04-10T10:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.tdsantos.com/post/2020-04-10-series-test2/</loc>
+    <lastmod>2021-04-10T10:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.tdsantos.com/series/series-testing/</loc>
+    <lastmod>2021-04-10T10:00:00-05:00</lastmod>
   </url><url>
     <loc>https://blog.tdsantos.com/tags/</loc>
-    <lastmod>2020-03-14T12:25:14-05:00</lastmod>
+    <lastmod>2021-04-10T10:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -59,46 +87,28 @@
                 href="https://blog.tdsantos.com/tags/"
                 />
   </url><url>
+    <loc>https://blog.tdsantos.com/tags/data-science/</loc>
+    <lastmod>2020-03-14T12:25:14-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.tdsantos.com/tags/learning/</loc>
+    <lastmod>2020-03-14T12:25:14-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.tdsantos.com/tags/multivariate/</loc>
+    <lastmod>2020-03-14T12:25:14-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.tdsantos.com/post/2020-03-14-covid19simulationsseir/</loc>
+    <lastmod>2020-03-14T12:25:14-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.tdsantos.com/categories/stats/</loc>
+    <lastmod>2020-03-14T12:25:14-05:00</lastmod>
+  </url><url>
     <loc>https://blog.tdsantos.com/post/2018-11-18-statscourse/</loc>
     <lastmod>2018-11-18T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://blog.tdsantos.com/tags/blog/</loc>
-    <lastmod>2017-12-03T10:00:00-05:00</lastmod>
-  </url><url>
-    <loc>https://blog.tdsantos.com/categories/challenge/</loc>
-    <lastmod>2017-12-03T10:00:00-05:00</lastmod>
-  </url><url>
-    <loc>https://blog.tdsantos.com/tags/challenge/</loc>
-    <lastmod>2017-12-03T10:00:00-05:00</lastmod>
   </url><url>
     <loc>https://blog.tdsantos.com/post/2017-12-03-feedzai/</loc>
     <lastmod>2017-12-03T10:00:00-05:00</lastmod>
   </url><url>
-    <loc>https://blog.tdsantos.com/categories/feedzai/</loc>
-    <lastmod>2017-12-03T10:00:00-05:00</lastmod>
-  </url><url>
-    <loc>https://blog.tdsantos.com/tags/feedzai/</loc>
-    <lastmod>2017-12-03T10:00:00-05:00</lastmod>
-  </url><url>
-    <loc>https://blog.tdsantos.com/categories/life/</loc>
-    <lastmod>2017-12-03T10:00:00-05:00</lastmod>
-  </url><url>
-    <loc>https://blog.tdsantos.com/tags/mission/</loc>
-    <lastmod>2017-12-03T10:00:00-05:00</lastmod>
-  </url><url>
     <loc>https://blog.tdsantos.com/about/</loc>
     <lastmod>2017-10-17T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://blog.tdsantos.com/series/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://blog.tdsantos.com/fr/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.tdsantos.com/series/"
-                />
   </url>
 </urlset>

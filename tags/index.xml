@@ -7,7 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 14 Mar 2020 12:25:14 -0500</lastBuildDate><atom:link href="https://blog.tdsantos.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Apr 2021 10:00:00 -0500</lastBuildDate><atom:link href="https://blog.tdsantos.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>blog</title>
+      <link>https://blog.tdsantos.com/tags/blog/</link>
+      <pubDate>Sat, 10 Apr 2021 10:00:00 -0500</pubDate>
+      
+      <guid>https://blog.tdsantos.com/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>challenge</title>
+      <link>https://blog.tdsantos.com/tags/challenge/</link>
+      <pubDate>Sat, 10 Apr 2021 10:00:00 -0500</pubDate>
+      
+      <guid>https://blog.tdsantos.com/tags/challenge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>feedzai</title>
+      <link>https://blog.tdsantos.com/tags/feedzai/</link>
+      <pubDate>Sat, 10 Apr 2021 10:00:00 -0500</pubDate>
+      
+      <guid>https://blog.tdsantos.com/tags/feedzai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mission</title>
+      <link>https://blog.tdsantos.com/tags/mission/</link>
+      <pubDate>Sat, 10 Apr 2021 10:00:00 -0500</pubDate>
+      
+      <guid>https://blog.tdsantos.com/tags/mission/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Data Science</title>
       <link>https://blog.tdsantos.com/tags/data-science/</link>
@@ -32,42 +68,6 @@
       <pubDate>Sat, 14 Mar 2020 12:25:14 -0500</pubDate>
       
       <guid>https://blog.tdsantos.com/tags/multivariate/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blog</title>
-      <link>https://blog.tdsantos.com/tags/blog/</link>
-      <pubDate>Sun, 03 Dec 2017 10:00:00 -0500</pubDate>
-      
-      <guid>https://blog.tdsantos.com/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>challenge</title>
-      <link>https://blog.tdsantos.com/tags/challenge/</link>
-      <pubDate>Sun, 03 Dec 2017 10:00:00 -0500</pubDate>
-      
-      <guid>https://blog.tdsantos.com/tags/challenge/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>feedzai</title>
-      <link>https://blog.tdsantos.com/tags/feedzai/</link>
-      <pubDate>Sun, 03 Dec 2017 10:00:00 -0500</pubDate>
-      
-      <guid>https://blog.tdsantos.com/tags/feedzai/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mission</title>
-      <link>https://blog.tdsantos.com/tags/mission/</link>
-      <pubDate>Sun, 03 Dec 2017 10:00:00 -0500</pubDate>
-      
-      <guid>https://blog.tdsantos.com/tags/mission/</guid>
       <description></description>
     </item>
     
