@@ -93,7 +93,7 @@ Maybe we have found a pattern in our historical data that appears 70% of the tim
 <br>
 
 ```{r ds-be-like, fig.cap='Data Science? That\'s just feeding data to models.', echo = F}
-knitr::include_graphics("images/data_science_be_like.gif", error = FALSE)
+knitr::include_graphics("/images/data_science_be_like.gif", error = FALSE)
 ```
 
 Another challenge rises when the models containing the learned patterns (the ones that data scientists have found) have to be deployed in these real time systems - maybe a feature that is pretty usefull for the model cannot be reproduced in real time due to time-bound constraints, and therefore that feature do not help us.
