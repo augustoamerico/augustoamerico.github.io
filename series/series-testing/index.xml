@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series Testing on Hello Friend NG</title>
-    <link>https://blog.tdsantos.com/series/series-testing/</link>
+    <link>/series/series-testing/</link>
     <description>Recent content in Series Testing on Hello Friend NG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 10 Apr 2021 10:00:00 -0500</lastBuildDate><atom:link href="https://blog.tdsantos.com/series/series-testing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Apr 2021 10:00:00 -0500</lastBuildDate><atom:link href="/series/series-testing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Series Test 1</title>
-      <link>https://blog.tdsantos.com/post/2020-04-10-series-test/</link>
+      <link>/post/2020-04-10-series-test/</link>
       <pubDate>Sat, 10 Apr 2021 10:00:00 -0500</pubDate>
       
-      <guid>https://blog.tdsantos.com/post/2020-04-10-series-test/</guid>
+      <guid>/post/2020-04-10-series-test/</guid>
       <description>Since 2016 I’ve been focusing on data science and distributed computing, a path that I’ve decided to take back in late 2014 when I got back do University to take a Masters in Computer Science. At the time, I was looking to learn a bit about machine learning and tons about distributed system and web development - but while I was learning more about Operational Research and Machine Learning, my direction changed a little bit and I begin to study Data Visualization and Data Warehouse.</description>
     </item>
     
     <item>
       <title>Series Test 2</title>
-      <link>https://blog.tdsantos.com/post/2020-04-10-series-test2/</link>
+      <link>/post/2020-04-10-series-test2/</link>
       <pubDate>Sat, 10 Apr 2021 10:00:00 -0500</pubDate>
       
-      <guid>https://blog.tdsantos.com/post/2020-04-10-series-test2/</guid>
+      <guid>/post/2020-04-10-series-test2/</guid>
       <description>Since 2016 I’ve been focusing on data science and distributed computing, a path that I’ve decided to take back in late 2014 when I got back do University to take a Masters in Computer Science. At the time, I was looking to learn a bit about machine learning and tons about distributed system and web development - but while I was learning more about Operational Research and Machine Learning, my direction changed a little bit and I begin to study Data Visualization and Data Warehouse.</description>
     </item>
     

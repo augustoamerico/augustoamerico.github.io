@@ -2,72 +2,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Hello Friend NG</title>
-    <link>https://blog.tdsantos.com/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Hello Friend NG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 10 Apr 2021 10:00:00 -0500</lastBuildDate><atom:link href="https://blog.tdsantos.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Apr 2021 10:00:00 -0500</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>blog</title>
-      <link>https://blog.tdsantos.com/tags/blog/</link>
+      <link>/tags/blog/</link>
       <pubDate>Sat, 10 Apr 2021 10:00:00 -0500</pubDate>
       
-      <guid>https://blog.tdsantos.com/tags/blog/</guid>
+      <guid>/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>challenge</title>
-      <link>https://blog.tdsantos.com/tags/challenge/</link>
+      <link>/tags/challenge/</link>
       <pubDate>Sat, 10 Apr 2021 10:00:00 -0500</pubDate>
       
-      <guid>https://blog.tdsantos.com/tags/challenge/</guid>
+      <guid>/tags/challenge/</guid>
       <description></description>
     </item>
     
     <item>
       <title>feedzai</title>
-      <link>https://blog.tdsantos.com/tags/feedzai/</link>
+      <link>/tags/feedzai/</link>
       <pubDate>Sat, 10 Apr 2021 10:00:00 -0500</pubDate>
       
-      <guid>https://blog.tdsantos.com/tags/feedzai/</guid>
+      <guid>/tags/feedzai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mission</title>
-      <link>https://blog.tdsantos.com/tags/mission/</link>
+      <link>/tags/mission/</link>
       <pubDate>Sat, 10 Apr 2021 10:00:00 -0500</pubDate>
       
-      <guid>https://blog.tdsantos.com/tags/mission/</guid>
+      <guid>/tags/mission/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Science</title>
-      <link>https://blog.tdsantos.com/tags/data-science/</link>
+      <link>/tags/data-science/</link>
       <pubDate>Sat, 14 Mar 2020 12:25:14 -0500</pubDate>
       
-      <guid>https://blog.tdsantos.com/tags/data-science/</guid>
+      <guid>/tags/data-science/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Learning</title>
-      <link>https://blog.tdsantos.com/tags/learning/</link>
+      <link>/tags/learning/</link>
       <pubDate>Sat, 14 Mar 2020 12:25:14 -0500</pubDate>
       
-      <guid>https://blog.tdsantos.com/tags/learning/</guid>
+      <guid>/tags/learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Multivariate</title>
-      <link>https://blog.tdsantos.com/tags/multivariate/</link>
+      <link>/tags/multivariate/</link>
       <pubDate>Sat, 14 Mar 2020 12:25:14 -0500</pubDate>
       
-      <guid>https://blog.tdsantos.com/tags/multivariate/</guid>
+      <guid>/tags/multivariate/</guid>
       <description></description>
     </item>
     
