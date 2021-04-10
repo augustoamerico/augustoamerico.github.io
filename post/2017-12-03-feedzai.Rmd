@@ -93,7 +93,7 @@ Maybe we have found a pattern in our historical data that appears 70% of the tim
 <br>
 
 ```{r ds-be-like, fig.cap='Data Science? That\'s just feeding data to models.', echo = F}
-knitr::include_graphics("/images/data_science_be_like.gif", error = FALSE)
+knitr::include_graphics("images/data_science_be_like.gif", error = FALSE)
 ```
 
 Another challenge rises when the models containing the learned patterns (the ones that data scientists have found) have to be deployed in these real time systems - maybe a feature that is pretty usefull for the model cannot be reproduced in real time due to time-bound constraints, and therefore that feature do not help us.
@@ -119,5 +119,5 @@ So, for my next challenge I will choose Feedzai - because I believe in the proje
 
 
 ```{r feedzai-is-ai, fig.cap='Feedzai is not a crystal ball. Feedzai is AI!', out.width = "70%", fig.align='center', echo = F}
-knitr::include_graphics("/images/feedzai_crystall_ball.jpg", error = FALSE)
+knitr::include_graphics("images/feedzai_crystall_ball.jpg", error = FALSE)
 ```
