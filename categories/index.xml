@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Hello Friend NG</title>
-    <link>https://blog.tdsantos.com/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Hello Friend NG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 10 Apr 2021 10:00:00 -0500</lastBuildDate><atom:link href="https://blog.tdsantos.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Apr 2021 10:00:00 -0500</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Challenge</title>
-      <link>https://blog.tdsantos.com/categories/challenge/</link>
+      <link>/categories/challenge/</link>
       <pubDate>Sat, 10 Apr 2021 10:00:00 -0500</pubDate>
       
-      <guid>https://blog.tdsantos.com/categories/challenge/</guid>
+      <guid>/categories/challenge/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Feedzai</title>
-      <link>https://blog.tdsantos.com/categories/feedzai/</link>
+      <link>/categories/feedzai/</link>
       <pubDate>Sat, 10 Apr 2021 10:00:00 -0500</pubDate>
       
-      <guid>https://blog.tdsantos.com/categories/feedzai/</guid>
+      <guid>/categories/feedzai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Life</title>
-      <link>https://blog.tdsantos.com/categories/life/</link>
+      <link>/categories/life/</link>
       <pubDate>Sat, 10 Apr 2021 10:00:00 -0500</pubDate>
       
-      <guid>https://blog.tdsantos.com/categories/life/</guid>
+      <guid>/categories/life/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Stats</title>
-      <link>https://blog.tdsantos.com/categories/stats/</link>
+      <link>/categories/stats/</link>
       <pubDate>Sat, 14 Mar 2020 12:25:14 -0500</pubDate>
       
-      <guid>https://blog.tdsantos.com/categories/stats/</guid>
+      <guid>/categories/stats/</guid>
       <description></description>
     </item>
     

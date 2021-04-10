@@ -2,52 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.tdsantos.com/fr/categories/</loc>
+    <loc>/fr/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.tdsantos.com/categories/"
+                href="/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://blog.tdsantos.com/fr/categories/"
+                href="/fr/categories/"
                 />
   </url><url>
-    <loc>https://blog.tdsantos.com/fr/</loc>
+    <loc>/fr/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.tdsantos.com/"
+                href="/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://blog.tdsantos.com/fr/"
+                href="/fr/"
                 />
   </url><url>
-    <loc>https://blog.tdsantos.com/fr/series/</loc>
+    <loc>/fr/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.tdsantos.com/series/"
+                href="/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://blog.tdsantos.com/fr/series/"
+                href="/fr/series/"
                 />
   </url><url>
-    <loc>https://blog.tdsantos.com/fr/tags/</loc>
+    <loc>/fr/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.tdsantos.com/tags/"
+                href="/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://blog.tdsantos.com/fr/tags/"
+                href="/fr/tags/"
                 />
   </url>
 </urlset>

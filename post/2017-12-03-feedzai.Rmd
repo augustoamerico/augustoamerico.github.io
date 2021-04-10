@@ -119,5 +119,5 @@ So, for my next challenge I will choose Feedzai - because I believe in the proje
 
 
 ```{r feedzai-is-ai, fig.cap='Feedzai is not a crystal ball. Feedzai is AI!', out.width = "70%", fig.align='center', echo = F}
-knitr::include_graphics("/images/feedzai_crystall_ball.jpg", error = FALSE)
+knitr::include_graphics("images/feedzai_crystall_ball.jpg", error = FALSE)
 ```
